@@ -16,8 +16,11 @@ python manage.py startapp "test"
 
 python manage.py createsuperuser
 
-## Table of Content
+################################## Table of Content  ##################################
 
+# diagram drawio
+
+https://drive.google.com/file/d/1evOBn7-puS0Lts3QTzMQ-QAc3GRBNdhj/view?ts=64711759
 
 
 
