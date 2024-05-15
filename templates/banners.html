@@ -1,0 +1,136 @@
+<!--
+<link rel="stylesheet" type="text/css" href="css/banners.css">
+{% load static %} -->
+
+<!DOCTYPE html>
+{% load banner_template_tags %}
+
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>banner</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+
+  <body>
+
+    <style>
+      .banner2 {
+        background-color: #fff;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
+      .ban_img {
+        height: 680px;
+        width: 100%;
+      }
+      .ban5_img {
+        height: 580px;
+        width: 100%;
+      }
+      .btn-light {
+        color: #000;
+        background-color: #fff;
+        border-color: #fff;
+        border-radius: 20px;
+      }
+      .wrap-btn-slide1 a:hover {
+        background-color: whitesmoke;
+        color: #000 !important;
+        opacity: 0.7;
+      }
+    </style>
+
+    <section class="banner">
+
+      <h3 class="m-text5 t-center">
+        Esenciales de temporada
+    </h3>
+      {% banners %}
+      <br /><br />
+      {% banners2 %}
+      <br /><br /><br/>
+
+      {% banners3 %}
+    <br><br><br><br>
+      <h3 class="m-text5 t-center">
+        Mas Productos
+    </h3>
+    <br><br><br>
+      {% banners4 %}
+    </section>
+
+    <!--
+
+
+
+            <section class="banner2 bg5 p-t-55 p-b-55">
+                <h4 style="font-weight: 500;">Mas Productos</h4>
+                <div class="">
+                    <div class="row">
+                        <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto p-t-15 p-b-15">
+                              {% for b in banners %}
+    <div>
+        <h2>hola mundo : {{ b.name }}</h2>
+        <p>hola mundo : {{ b.description }}</p>
+        <p>hola mundo : {{ b.image.url }}</p>
+        <p>hola mundo : {{ b.is_active }}</p>
+    </div>
+{% endfor %}
+
+                            <div class="pos-relative">
+                                <img src="{{ b.image.url }}" alt="IMG-BANNER" class="ban5_img">
+                                <div class="ab-t-l sizefull flex-col-c-m p-l-15 p-r-15">
+                                    <br><br><br><br><br>
+                                    <br><br><br><br><br>
+                                    <br><br><br><br><br>
+                                        <div class="wrap-btn-slide1 w-size1 animated" data-appear="slideInUp">
+                                    <a href="{{ b.url }}" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite  trans-0-4">
+                                        Hombres
+                                    </a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto p-t-15 p-b-15">
+                            <div class="pos-relative">
+                                <img src="https://static.nike.com/a/images/f_auto/dpr_2.0/h_573,c_limit/2c8754ce-6287-4e77-a198-1ad483fba257/nike-just-do-it.png" alt="IMG-BANNER" class="ban5_img">
+                                <div class="ab-t-l sizefull flex-col-c-m p-l-15 p-r-15">
+                                    <br><br><br><br><br>
+                                    <br><br><br><br><br>
+                                    <br><br><br><br><br>
+                                        <div class="wrap-btn-slide1 w-size1 animated" data-appear="slideInUp">
+                                    <a href="/shop/" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite  trans-0-4">
+                                        Mujeres
+                                    </a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-10 col-md-8 col-lg-4 m-l-r-auto p-t-15 p-b-15">
+                            <div class="pos-relative">
+                                <img src="https://static.nike.com/a/images/f_auto/dpr_2.0/h_573,c_limit/414db494-7ebc-4d53-bbff-58d50b380a24/nike-just-do-it.png" alt="IMG-BANNER" class="ban5_img">
+                                <div class="ab-t-l sizefull flex-col-c-m p-l-15 p-r-15">
+                                    <br><br><br><br><br>
+                                    <br><br><br><br><br>
+                                    <br><br><br><br><br>
+                                        <div class="wrap-btn-slide1 w-size1 animated" data-appear="slideInUp">
+                                    <a href="/shop/" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite  trans-0-4">
+                                        Niños
+                                    </a>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+-->
+  </body>
+</html>
