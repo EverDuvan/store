@@ -1,0 +1,11 @@
+<h2>product html</h2>
+{% for b in products %}
+<div>
+    <h2>nombre del producto: {{ b.name }}</h2>
+    <p>descripcion del producto : {{ b.description }}</p>
+    <p>brand : {{ b.brand }}</p>
+    <p>is active : {{ b.is_active }}</p>
+    
+</div>
+{% endfor %}
+

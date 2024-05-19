@@ -1,0 +1,10 @@
+<h2>image html</h2>
+
+{% for i in images %}
+
+<div>
+    <h2>nombre del producto: {{ i.name }}</h2>
+    <p>descripcion del producto : {{ i.description }}</p>
+    <img src="{{ i.image.url }}" alt="{{ i.name }}">
+</div>
+{% endfor %}

@@ -1,104 +1,19 @@
-{% extends 'base.html' %}
-{% load static %}
-{% load category_template_tags %}
-{% load slide_template_tags %}
+<!DOCTYPE html>
 
-{% block content %}
-<!-- Slide1 -->
-<section class="slide1">
-    <div class="wrap-slick1">
-        <div class="slick1">
-            {% slides %}
-        </div>
-    </div>
-</section>
-
-<!-- Category start -->
-<section class="banner bgwhite p-t-40 p-b-40">
-    <div class="container">
-        <div class="row">
-            {% categories_div %}
-        </div>
-    </div>
-</section>
-
-<!-- New Product -->
-<section class="newproduct bgwhite p-t-45 p-b-105">
-    <div class="container">
-        <div class="sec-title p-b-60">
-            <h3 class="m-text5 t-center">
-                PRODUCTOS DESTACADOS
-            </h3>
-        </div>
-
-        <!-- Slide2 -->
-        <div class="wrap-slick2">
-            <div class="slick2">
-                {% for item in object_list %}
-                <div class="item-slick2 p-l-15 p-r-15">
-                    <!-- Block2 -->
-                    <div class="block2">
-                        <div class="block2-img wrap-pic-w of-hidden pos-relative block2-label{{item.get_label_display}}">
-                            <a href="{{item.get_absolute_url}}">
-                                <img src="{{ item.image.url }}" alt="IMG-PRODUCT" style="height: 370px; width:100%;">
-                            </a>
-                        </div>
-                        <div class="block2-txt p-t-20">
-                            <a href="{{item.get_absolute_url}}" class="block2-name dis-block s-text3 p-b-5" style="color: black;">
-                                {{ item.title }}
-                            </a>
-                            {% if item.discount_price %}
-                            <span class="block2-oldprice m-text7 p-r-5" style="color: black;">
-                                ${{ item.price }}
-                            </span>
-                            <span class="block2-newprice m-text8 p-r-5">
-                                ${{ item.discount_price }}
-                            </span>
-                            {% else %}
-                            <span class="block2-price m-text6 p-r-5" style="color: black;">
-                                ${{ item.price }}
-                            </span>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Include banners -->
-
-{% include "banners.html" %}
-
-<!-- Shipping -->
-<section class="shipping bgwhite p-t-62 p-b-46">
-    <div class="flex-w p-l-15 p-r-15">
-        <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
-            <h4 class="m-text12 t-center">
-                Entrega gratis
-            </h4>
-            <a href="#" class="s-text11 t-center">
-                Click aqui para mas informacion
-            </a>
-        </div>
-        <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 bo2 respon2">
-            <h4 class="m-text12 t-center">
-                30 dias de garantía
-            </h4>
-            <span class="s-text11 t-center">
-                Devolucion antes de 30 días.
-            </span>
-        </div>
-        <div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
-            <h4 class="m-text12 t-center">
-                Horario
-            </h4>
-            <span class="s-text11 t-center">
-                Tienda abierta de lunes a viernes
-            </span>
-        </div>
-    </div>
-</section>
-{% endblock content %}
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>store</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <h2>hola mundo : {{ products }}</h2>
+    </body>
+</html>
